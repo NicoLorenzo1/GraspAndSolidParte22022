@@ -12,7 +12,8 @@ namespace Full_GRASP_And_SOLID.Library
     public class Recipe
     {
         private static ArrayList steps = new ArrayList();
-
+        public static Product FinalProduct { get; set; }
+        
         /// <summary>
         /// Método get publico para obtener los steps
         /// </summary>
@@ -23,11 +24,8 @@ namespace Full_GRASP_And_SOLID.Library
             {
                 return steps;
             }
-
         }
-
-        public static Product FinalProduct { get; set; }
-
+        
         public void AddStep(Step step)
         {
             steps.Add(step);
@@ -37,7 +35,6 @@ namespace Full_GRASP_And_SOLID.Library
         {
             steps.Remove(step);
         }
-
 
     }
 }
